@@ -1,0 +1,35 @@
+.search {
+    position: relative;
+
+    // width: 100%;
+    max-width: 818px;
+    flex-grow: 4;
+
+    @media screen and (max-width: 768px) {
+        order: 4;
+        max-width: 100%;
+        width: 100%;
+
+        margin-top: 23px;
+    }
+}
+
+.search__input {
+    height: 50px;
+    border: 1px solid #CDCDCD;
+    border-radius: 16px;
+
+    width: 100%;
+    // max-width: 818px;
+}
+
+.search__button {
+    position: absolute;
+    right: 13px;
+    top: 25px;
+    transform: translateY(-50%);
+
+
+    background-color: transparent;
+    border: none;
+}

@@ -1,0 +1,25 @@
+@use "sass:math";
+
+@mixin row() {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc((var(--columnGap) / 2) * (-1));
+    margin-right: calc((var(--columnGap) / 2) * (-1));
+}
+
+@mixin col() {
+    box-sizing: border-box;
+    word-wrap: break-word;
+    margin-left: calc(var(--columnGap) / 2);
+    margin-right: calc(var(--columnGap) / 2);
+}
+
+@mixin size($n) {
+    $val: calc((100% / var(--columns)) * $n);
+    width: #{calc(#{$val} - #{calc((var(--columnGap) / 2) * ($n + 1))}
+    )};
+}
+
+// Размер колонки далее задаем так
+// @include col();
+// @include size(5);

@@ -1,0 +1,82 @@
+@use "sass:math";
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+
+	width: 100%;
+	min-width: 32rem;
+	min-height: 100vh;
+	/* mobile viewport bug fix */
+	// min-height: -webkit-fill-available;
+	overflow-x: hidden;
+
+	font-family: 'Montserrat';
+	font-weight: 400;
+	font-size: 10px;
+	color: $colorText;
+	// font-size: 0,69445vw; // 2 rem = 20px // 0,69445 получаем так: 10 / (1440 / 100), на других брекпоинтах это значение необходимо переопределить
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: auto;
+
+	/*Перенос длинных слов*/
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+
+	-webkit-animation: bugfix infinite 1s;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+// https://stackoverflow.com/questions/8320530/webkit-bug-with-hover-and-multiple-adjacent-sibling-selectors
+@-webkit-keyframes bugfix {
+	from {
+		padding: 0;
+	}
+
+	to {
+		padding: 0;
+	}
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	width: 100%;
+	clear: both;
+}
+
+.container {
+	width: 100%;
+	max-width: $containerWidth;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: math.div($columnGap, 2);
+	padding-right: math.div($columnGap, 2);
+}
+
+.row {
+	@include row();
+}
+
+a {
+	color: $colorText;
+	text-decoration: none;
+}
+
+ul {
+	padding-left: 0;
+	list-style-type: none;
+}

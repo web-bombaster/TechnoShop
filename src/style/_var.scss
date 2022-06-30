@@ -1,0 +1,68 @@
+:root {
+	/* desktop vars */
+	--containerWidth: 185rem; // 1850px // var(--containerWidth)
+	--columns: 5; // var(--columns)
+	--columnGap: 3rem; // var(--columnGap)
+}
+
+@media screen and (max-width: 1600px) {
+	:root {
+		--columns: 4;
+		--columnGap: 2rem;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	:root {
+		--columns: 6;
+		--columnGap: 2rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	:root {
+		--columns: 4;
+		--columnGap: 2rem;
+	}
+}
+
+@media screen and (max-width: 460px) {
+	:root {
+		--columns: 2;
+		--columnGap: 1rem;
+	}
+}
+
+
+
+
+
+// Настройка сетки, контейнера
+$containerWidth: 185rem; // 1850px
+$columns: 5;
+// $columnWidth: 34rem;
+$columnGap: 3rem;
+
+@media screen and (max-width: 1600px) {
+	$columns: 4;
+	$columnGap: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+	$columns: 6;
+	$columnGap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+	$columns: 4;
+	$columnGap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+	$columns: 2;
+	$columnGap: 1rem;
+}
+
+// Цвета
+$colorText: #272727; // textColor
+$colorAkcent: #04E277;
