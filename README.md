@@ -1,10 +1,9 @@
 
-
-[https://web-bombaster.github.io/TechnoShop/dist/](https://web-bombaster.github.io/TechnoShop/dist/)
+Посмотреть проект на [GitHub Pages](https://web-bombaster.github.io/TechnoShop/dist/)
 
 # WEBPACK
 
-ссылка на youtube [https://youtu.be/j2kK1Lfl30A](https://youtu.be/j2kK1Lfl30A)
+Ссылка на настройку WEBPACK [https://youtu.be/j2kK1Lfl30A](https://youtu.be/j2kK1Lfl30A)
 
 Для установки пакетов используйте команду npm install
 
